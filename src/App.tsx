@@ -1,15 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import SearchBar from './components/SearchBar';
 
 function App() {
   return (
     <div className="App">
-      <header>
-        
-      </header>
+      <nav>
+        <h1>Dummy navbar</h1>
+      </nav>
       <main>
-        
+      <SearchBar/>
+
+        xDDD
+
       </main>
     </div>
   );
