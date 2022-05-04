@@ -1,6 +1,6 @@
 import './App.css';
 import SearchBar from './components/SearchBar';
-
+import ListLaunches from './components/ListLaunches';
 function App() {
   return (
     <div className="App">
@@ -9,8 +9,7 @@ function App() {
       </nav>
       <main>
       <SearchBar/>
-
-        xDDD
+      <ListLaunches/>
 
       </main>
     </div>
