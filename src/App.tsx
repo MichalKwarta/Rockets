@@ -1,7 +1,6 @@
 import "./App.css";
-import SearchBar from "./components/SearchBar";
 import ListLaunches from "./components/ListLaunches";
-import { Route, Router, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
 import LaunchDetails from "./components/LaunchDetails";
 import { Link } from "react-router-dom";
@@ -17,7 +16,7 @@ function App() {
         </nav>
         <main>
           <Routes>
-            
+
             <Route path="/" element={<ListLaunches />} />
             <Route path=":id" element={<LaunchDetails />} />
             <Route
