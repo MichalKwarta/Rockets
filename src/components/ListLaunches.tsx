@@ -8,7 +8,7 @@ import SearchBar from "./SearchBar";
 import React from "react";
 
 function ListLaunches() {
-  const { loading, error, data, fetchMore,refetch } = useQuery<
+  const { loading, error, data, fetchMore, refetch } = useQuery<
     LaunchListData,
     LaunchListVariables
   >(GET_LAUNCHES, {
@@ -17,12 +17,19 @@ function ListLaunches() {
       limit: constants.querySize,
     },
   });
-  if (error) return <div>
-    
-    Something went wrong
-  
-    <button onClick={() => { refetch()}}> Retry Query </button>
-  </div>;
+  if (error)
+    return (
+      <div>
+        Something went wrong
+        <button
+          onClick={() => {
+            refetch();
+          }}
+        >
+          Retry Query
+        </button>
+      </div>
+    );
   if (loading)
     return (
       <div className="ListLaunches">
@@ -31,7 +38,7 @@ function ListLaunches() {
         <span>loading...</span>
       </div>
     );
-  if (!data) return <div>No data</div>; 
+  if (!data) return <div>No data</div>;
 
   return (
     <>
@@ -68,7 +75,8 @@ function ListLaunches() {
                           };
                         },
                       }).catch(
-                        (err) => console.log("Error fetching more launches: ", err)
+                        (err) =>
+                          console.log("Error fetching more launches: ", err)
                         //Teoretycznie nie było wyspecyfikowane jak to handlować
                       );
                     }
