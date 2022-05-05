@@ -6,8 +6,7 @@ type constantsType = {
 const constants: constantsType = {
   querySize: 10,
   API_URL: "https://api.spacex.land/graphql/",
-  fetchBuffer: 2,
+  fetchBuffer: 4,
 };
-
 
 export default constants;

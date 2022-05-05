@@ -1,10 +1,13 @@
-import { useParams } from 'react-router'
+import { useParams } from "react-router";
 
 function LaunchDetails() {
-const id = useParams().id
-  return (
-      <div>LaunchDetails o numerku { id}</div>
-  )
+  const id = useParams().id;
+
+  if (isNaN(Number(id))) {
+    return <div>Invalid ID</div>;
+  }
+
+  return <div>LaunchDetails o id {id}</div>;
 }
 
-export default LaunchDetails
+export default LaunchDetails;
