@@ -62,7 +62,10 @@ function ListLaunches() {
                             ],
                           };
                         },
-                      });
+                      }).catch(
+                        (err) => console.log("Error fetching more launches: ", err)
+                        //Teoretycznie nie było wyspecyfikowane jak to handlować
+                      );
                     }
                   }}
                 />
